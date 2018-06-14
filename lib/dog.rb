@@ -70,6 +70,9 @@ attr_reader :id
     #binding.pry
   end
 
+  def self.new_from_db(row)
+
+  end
 
 
 end
