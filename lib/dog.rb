@@ -87,6 +87,10 @@ attr_reader :id
 
   end
 
+  def update
+    
+
+  end
 
 
 
