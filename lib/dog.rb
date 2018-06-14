@@ -33,13 +33,16 @@ attr_reader :id
     VALUES (?,?)
     SQL
 
-    dog = DB[:conn].execute(sql, self.name, self.breed)
-    @id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")[0]
-    dog
-
+    DB[:conn].execute(sql, self.name, self.breed)
+    @id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")[0][0]
+    self
+    #binding.pry
   end
 
+  def self.create(name:, breed:)
 
+
+  end
 
 
 
