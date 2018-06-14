@@ -61,7 +61,8 @@ attr_reader :id
     WHERE name = ? AND breed = ?
     SQL
 
-    dog = DB[:conn].execute(sql,
+    dog = DB[:conn].execute(sql,name,breed)
+    binding.pry
 
   end
 
