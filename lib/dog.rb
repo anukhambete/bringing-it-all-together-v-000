@@ -51,6 +51,7 @@ attr_reader :id
     SQL
 
     DB[:conn].execute(sql,id)
+    binding.pry
   end
 
 
