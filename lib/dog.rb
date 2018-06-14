@@ -80,9 +80,13 @@ attr_reader :id
     SELECT * FROM dogs
     WHERE name = ?
     SQL
+
+    DB[:conn].execute(sql,name.flatten
+
+    
   end
 
 
 
-  
+
 end
