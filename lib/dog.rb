@@ -82,6 +82,8 @@ attr_reader :id
     SQL
 
     dog_array = DB[:conn].execute(sql,name).flatten
+    dog = Dog.new(id:dog_array[0],name:dog_array[1],breed:dog_array[2])
+    dog
 
 
   end
