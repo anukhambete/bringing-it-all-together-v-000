@@ -64,6 +64,8 @@ attr_reader :id
     dog_array = DB[:conn].execute(sql,name,breed).flatten
     if !dog_array.empty?
       dog = Dog.new(id:dog_array[0],name:dog_array[1],breed:dog_array[2])
+    else
+      dog = self.create(name: name, breed: breed)
 
     #binding.pry
 
