@@ -62,7 +62,8 @@ attr_reader :id
     SQL
 
     dog = DB[:conn].execute(sql,name,breed)
-    binding.pry
+
+    #binding.pry
 
   end
 
