@@ -41,7 +41,7 @@ attr_reader :id
 
   def self.create(name:, breed:)
     dog = Dog.new(name, breed)
-    binding.pry
+    
     dog.save
     dog
   end
