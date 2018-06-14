@@ -50,7 +50,7 @@ attr_reader :id
     SELECT * FROM dogs WHERE id = ?
     SQL
 
-    DB[:conn].execute(sql,id)
+    dog_array = DB[:conn].execute(sql,id).flatten
     binding.pry
   end
 
