@@ -72,6 +72,7 @@ attr_reader :id
 
   def self.new_from_db(row)
     dog = Dog.new(id:row[0],name:row[1],breed:row[2])
+    dog
   end
 
 
