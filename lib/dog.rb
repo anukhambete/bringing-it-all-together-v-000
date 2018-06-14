@@ -81,7 +81,7 @@ attr_reader :id
     WHERE name = ?
     SQL
 
-    dog = DB[:conn].execute(sql,name).flatten
+    dog_array = DB[:conn].execute(sql,name).flatten
 
 
   end
