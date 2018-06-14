@@ -61,7 +61,9 @@ attr_reader :id
     WHERE name = ? AND breed = ?
     SQL
 
-    dog = DB[:conn].execute(sql,name,breed).flatten
+    dog_array = DB[:conn].execute(sql,name,breed).flatten
+    if !dog_array.empty?
+      dog = Dog.new(id:dog_array[0],name:dog_array[1],breed:dog_array[2])
 
     #binding.pry
 
